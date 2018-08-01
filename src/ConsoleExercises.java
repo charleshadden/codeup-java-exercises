@@ -88,7 +88,7 @@ public class ConsoleExercises {
         System.out.println("Enter 3 grocery items separated with commas, no spaces");
         String strSentence1 = input.nextLine();
 
-        input1.useDelimiter("\n");
+        input1.useDelimiter(" ");
         System.out.println(strSentence1);
 
 

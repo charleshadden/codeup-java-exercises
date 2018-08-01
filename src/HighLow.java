@@ -10,21 +10,25 @@ public class HighLow {
         int n1 = rand1.nextInt(100) + 1;
 
         int turnCount = 0;
+            System.out.println("Guess a number between 1 and 100");
 
         for(turnCount = 8; turnCount >= 0; turnCount--){
 
-            System.out.println("Guess a number between 1 and 100");
             yourNum = input.nextInt();
             if (yourNum == n1) {
-                System.out.println("Good Guess");
+                System.out.println("Good Guess You WIN!!!");
 
                 break;
             } else if (yourNum < n1) {
                 System.out.println("Higher Choose "+ turnCount + " more times!\"");
 
-            } else {
+            } else if (yourNum > n1){
                 System.out.println("Lower Choose " + turnCount + " more times!");
 
+            } else if (turnCount == 0){
+                System.out.println("You Lost");
+            } else {
+                System.out.println("You Lost");
             }
 
 
