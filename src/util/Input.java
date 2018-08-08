@@ -43,7 +43,10 @@ public class Input {
 
     }
     public double getDouble() {
-        return scanner.nextDouble();
+        double i = scanner.nextDouble();
+        scanner.nextLine();
+        return i;
     }
+
 
 }

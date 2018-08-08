@@ -66,7 +66,7 @@ public class ConsoleExercises {
 //        2) SecondFood
 //        3) ThirdFood
 
-
+this is a achange..
 //        System.out.println("Enter 3 favorite foods separated by only spaces!");
 //        String strSentence = input.nextLine();
 //        String[] parts = strSentence.split(" ");
