@@ -63,33 +63,33 @@ public class ControlFlowExercises {
 //            System.out.print( i + "\n");
 
 //        String answer="";
-//        do{
-//            System.out.print("Enter a Grade: ");
-//            int yourGrade = input.nextInt();
-//
-//
-//            if (yourGrade > 95) {
-//                System.out.println("You received an A+");
-//            } else if (yourGrade > 90) {
-//                System.out.println("You received an A");
-//            } else if (yourGrade > 85) {
-//                System.out.println("You received a B+");
-//            } else if (yourGrade > 80) {
-//                System.out.println("You received a B");
-//            } else if (yourGrade > 75) {
-//                System.out.println("You received a C+");
-//            } else if (yourGrade > 70) {
-//                System.out.println("You received a C");
-//            } else if (yourGrade > 65) {
-//                System.out.println("You received a D+");
-//            } else if (yourGrade > 60) {
-//                System.out.println("You received a D");
-//            } else {
-//                System.out.println("You received an F");
-//            }
-//            System.out.println("do you want to continue?");
-//            answer=input.next();
-//        }while(answer.equals("y"));
+        do{
+            System.out.print("Enter a Grade: ");
+            int yourGrade = input.nextInt();
+
+
+            if (yourGrade > 95) {
+                System.out.println("You received an A+");
+            } else if (yourGrade > 90) {
+                System.out.println("You received an A");
+            } else if (yourGrade > 85) {
+                System.out.println("You received a B+");
+            } else if (yourGrade > 80) {
+                System.out.println("You received a B");
+            } else if (yourGrade > 75) {
+                System.out.println("You received a C+");
+            } else if (yourGrade > 70) {
+                System.out.println("You received a C");
+            } else if (yourGrade > 65) {
+                System.out.println("You received a D+");
+            } else if (yourGrade > 60) {
+                System.out.println("You received a D");
+            } else {
+                System.out.println("You received an F");
+            }
+            System.out.println("do you want to continue?");
+            answer=input.next();
+        }while(answer.equals("y"));
 
     }
 

@@ -7,8 +7,11 @@ public class MoviesApplication {
     public static void main(String[] args) {
 
         Input input = new Input();
+       Movie[] movies = MoviesArray.findAll();
 
-        System.out.println("What would you like to do?\n");
+        int i;
+        do {
+
         System.out.println("0 - exit\n" +
                 "1 - view all movies\n" +
                 "2 - view movies in the drama category\n" +
@@ -16,46 +19,44 @@ public class MoviesApplication {
                 "4 - view movies in the horror category\n" +
                 "5 - view movies in the scifi category\n" +
                 "6 - Add Movie");
-        int i;
-        do {
-           System.out.println("Enter your choice");
-//           System.out.println(input.getInt());
+            System.out.println("What would you like to do?\n");
+
             i = input.getInt();
            if(i == 1) {
 
-               for (Movie movie: MoviesArray.findAll()) {
+               for (Movie movie: movies) {
                    System.out.println("Name: " + movie.getName() + "| Genre: " +  movie.getCategory().toUpperCase());
                }
 
            } else if (i == 2) {
 
-               for(Movie movie: MoviesArray.findAll()) {
+               for(Movie movie: movies) {
                    if(movie.getCategory().equals("drama")) {
-                       System.out.println("Name: " + movie.getName() + "| Genre: " +  movie.getCategory().toUpperCase());
+                       printMovie(movie);
                    }
                }
 
            } else if (i == 3) {
 
-               for(Movie movie: MoviesArray.findAll()) {
+               for(Movie movie: movies) {
                    if(movie.getCategory().equals("animated")) {
-                       System.out.println("Name: " + movie.getName() + "| Genre: " +  movie.getCategory().toUpperCase());
+                       printMovie(movie);
                    }
                }
 
            } else if (i == 4) {
 
-               for(Movie movie: MoviesArray.findAll()) {
+               for(Movie movie: movies) {
                    if(movie.getCategory().equals("horror")) {
-                       System.out.println("Name: " + movie.getName() + "| Genre: " +  movie.getCategory().toUpperCase());
+                       printMovie(movie);
                    }
                }
 
            } else if (i == 5) {
 
-               for(Movie movie: MoviesArray.findAll()) {
+               for(Movie movie: movies) {
                    if(movie.getCategory().equals("scifi")) {
-                       System.out.println("Name: " + movie.getName() + "| Genre: " +  movie.getCategory().toUpperCase());
+                       printMovie(movie);
                    }
                }
 
@@ -70,4 +71,9 @@ public class MoviesApplication {
            }
        } while(i != 0);
     }
+//=======Template for output==========\\
+    public static void printMovie(Movie movie) {
+        System.out.println("Name: " + movie.getName() + "| Genre: " +  movie.getCategory().toUpperCase());
+    }
+
 }
